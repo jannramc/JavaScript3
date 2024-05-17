@@ -1,5 +1,5 @@
 //Variable que mantiene el estado visible del carrito
-const carritoVisible = false;
+let carritoVisible = false;
 
 //Delay para que todos los elementos de la página cargen para ejecutar el script
 if(document.readyState == 'loading'){
