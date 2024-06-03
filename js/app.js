@@ -198,3 +198,150 @@ function actualizarTotalCarrito(){
     document.getElementsByClassName('carrito-precio-total')[0].innerText = '$'+total.toLocaleString("es") + ",00";
 
 }
+
+
+
+const productos = [
+    // Abrigos
+    {
+        id: "590774",
+        titulo: "falda corta dorada",
+        imagen: ".img/falda_corta_dorada.png",
+        precio: 23999
+    },
+    {
+        id: "591721",
+        titulo: "pantalón cargo verde",
+        imagen: ".img/jean_bota_Amp_verde.png",
+        precio: 83999
+    },
+    {
+        id: "597326",
+        titulo: "chaqueta animal print",
+        imagen: ".img/chaqueta_animal_print.png",
+        precio: 95000
+    },
+    {
+        id: "597489",
+        titulo: "Chaqueta denim azul medio",
+        imagen: "img/chaqueta_jean_azul_medio.png",
+        precio: 88000
+    },
+    {
+        id: "596403",
+        titulo: "jean bota amplia azul",
+        imagen: ".img/jean_bota_amplia.png",
+        precio: 79000
+    },
+   {
+        id: "593867",
+        titulo: "vestido largo marfil",
+        imagen: "./img/vestido_largo_marfil.png",
+        precio: 75500
+    },
+    {
+        id: "599010",
+        titulo: "vestido corto denim azul",
+        imagen: "./img/vestido_corto_jean_2.png",
+        precio: 71900
+    },
+    {
+        id: "597651",
+        titulo: "vestido largo multicolor",
+        imagen: "./img/vestido_largo_multicolor.png",
+        precio: 79800
+    },
+    {
+        id: "597654",
+        titulo: "conjunto croptop - pantalón lila",
+        imagen: "./img/conjunto_croptop_pantalon.png",
+        precio: 75800
+    },
+    {
+        id: "camiseta-05",
+        titulo: "Camiseta 05",
+        imagen: "./img/camisetas/05.jpg",
+        precio: 1000
+    },
+    {
+        id: "camiseta-06",
+        titulo: "Camiseta 06",
+        imagen: "./img/camisetas/06.jpg",
+        categoria: {
+            nombre: "Camisetas",
+            id: "camisetas"
+        },
+        precio: 1000
+    },
+    {
+        id: "camiseta-07",
+        titulo: "Camiseta 07",
+        imagen: "./img/camisetas/07.jpg",
+        categoria: {
+            nombre: "Camisetas",
+            id: "camisetas"
+        },
+        precio: 1000
+    },
+    {
+        id: "camiseta-08",
+        titulo: "Camiseta 08",
+        imagen: "./img/camisetas/08.jpg",
+        categoria: {
+            nombre: "Camisetas",
+            id: "camisetas"
+        },
+        precio: 1000
+    },
+    // Pantalones
+    {
+        id: "pantalon-01",
+        titulo: "Pantalón 01",
+        imagen: "./img/pantalones/01.jpg",
+        categoria: {
+            nombre: "Pantalones",
+            id: "pantalones"
+        },
+        precio: 1000
+    },
+    {
+        id: "pantalon-02",
+        titulo: "Pantalón 02",
+        imagen: "./img/pantalones/02.jpg",
+        categoria: {
+            nombre: "Pantalones",
+            id: "pantalones"
+        },
+        precio: 1000
+    },
+    {
+        id: "pantalon-03",
+        titulo: "Pantalón 03",
+        imagen: "./img/pantalones/03.jpg",
+        categoria: {
+            nombre: "Pantalones",
+            id: "pantalones"
+        },
+        precio: 1000
+    },
+    {
+        id: "pantalon-04",
+        titulo: "Pantalón 04",
+        imagen: "./img/pantalones/04.jpg",
+        categoria: {
+            nombre: "Pantalones",
+            id: "pantalones"
+        },
+        precio: 1000
+    },
+    {
+        id: "pantalon-05",
+        titulo: "Pantalón 05",
+        imagen: "./img/pantalones/05.jpg",
+        categoria: {
+            nombre: "Pantalones",
+            id: "pantalones"
+        },
+        precio: 1000
+    }
+];

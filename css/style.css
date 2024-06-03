@@ -157,6 +157,11 @@ header{
     opacity: 0;
 }
 
+.contador_items{
+  background-color: #666;
+  padding: .15rem .25rem;
+  border-radius: .25rem;
+}
 .carrito .header-carrito{
     background-color: #000;
     color: #fff;
@@ -307,6 +312,15 @@ header{
     scale: 1.05;
 }
 
+.carrito .carrito-comprado {
+  font-size: 20px;
+  font-family: 'poppins';
+}
+
+
+.disabled {
+  display: none;
+}
 
 /* SECCION RESPONSIVE */
 @media screen and (max-width: 850px) {
