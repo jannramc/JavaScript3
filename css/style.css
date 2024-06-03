@@ -1,10 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600&family=Titillium+Web:wght@200;300;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 *{
     margin: 0;
     padding:0;
     box-sizing: border-box;
-    font-family: 'Ubuntu';
+    font-family: 'poppins';
+}
+
+a {
+  text-decoration: none;
 }
 header{
     background-size: cover;
@@ -21,18 +25,17 @@ header{
 
   .formatoTitle{
     text-align: center;
-    margin: 10px;
   }
 
   #formatoTitle
   {
-    font-family: Cantarell;
-    font-size: 20px;
+    font-family: poppins;
+    font-size: 35px;
     font-weight: bold;
   }
 
   .formato .formato2 {
-    font-family: Ubuntu, Cantarell;
+    font-family:'poppins';
   }
   
   .formato {
@@ -46,7 +49,7 @@ header{
 
  
 .contenedor{
-    max-width: 1200px;
+    max-width: 2000px;
     padding: 120px;
     margin: 15px;
     display: flex;
@@ -57,25 +60,28 @@ header{
 
 /* SECCION CONTENEDOR DE ITEMS */
 .contenedor .contenedor-items{
-    margin: 20px;
+    padding: 25px; /*Margen de los items al titulo Todos los productos*/
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(165px, 1fr));
-    grid-gap:20px;
-    grid-row-gap: 20px;
-    width: 100%;
+    grid-template-columns: repeat(5, 1fr) /*(auto-fit, minmax(165px, 1fr))*/;
+    gap: 1rem;
+    grid-row-gap: 1rem;
+    /*width: 80%;*/
     transition: .3s;
 }
 .contenedor .contenedor-items .item{
-    width: 180px;
+    /*width: 195px;*/
+    max-width: 90%; 
     margin: 10px;
     border: 1px solid #666;
     border-radius: 10px;
+    text-align: center;
     padding: 10px;
     transition: .3s;
 }
 .contenedor .contenedor-items .item .img-item{
-    width: 158px;
+    width: 150px;
     height: 240px;
+    border-radius: 10px;
     object-fit: cover;
 }
 .contenedor .contenedor-items .item:hover{
@@ -88,32 +94,37 @@ header{
     text-align: center;
     text-transform: uppercase;
     font-size: 15px;
+    background-color: antiquewhite;
 }
 
 .precio_items{
     display: flex;
     align-items: center;
     justify-content: space-around;
+    background-color: antiquewhite;
 }
+
 .contenedor .contenedor-items .item .precio-item{
     /*display: block;*/
     text-align: center;
     font-weight: bold;
-    font-size: 1.10rem;
+    font-family: 'poppins';
+    font-size: 17.6px;
 }
 
 .contenedor .contenedor-items .item .precio-item-ant {
     text-decoration: line-through; /* Tachado */
-     /*display: block;*/
     text-align: center;
     font-size: 13px;
+    padding: .5rem;
 }
 
 #item-info-sku{
     text-align: center;
-    font-size: 9.5px;
+    font-size: 13.5px;
     color: darkslateblue;
-    margin: 0%;
+    background-color: rgb(247, 202, 142);
+    /*margin: 0%;*/
   }
 
 .contenedor .contenedor-items .item .boton-item{
@@ -128,7 +139,8 @@ header{
 }
 
 
-/* seccion carrito */
+/* sección carrito */
+
 .carrito{
     border: 1px solid #666;
     width: 30%;
@@ -137,12 +149,14 @@ header{
     overflow: hidden;
     margin-bottom: auto;
     position: sticky !important;
-    top: 0;
+    /*top: 1rem;*/
+    right: 5px;
     transition: .3s;
     /* Estilos para ocultar */
     margin-right: -20%;
     opacity: 0;
 }
+
 .carrito .header-carrito{
     background-color: #000;
     color: #fff;
@@ -152,7 +166,6 @@ header{
 .carrito .carrito-item{
     display: flex;
     align-items: center;
-    /* justify-content: space-between; */
     position: relative;
     border-bottom: 1px solid #666;
     padding: 20px;
@@ -166,6 +179,11 @@ header{
     margin-bottom: 10px;
     text-transform: uppercase;
 }
+.carrito-item-titulo{
+  font-family: 'poppins';
+  font-size: 15px;
+}
+
 .carrito .carrito-item .selector-cantidad{
     display: inline-block;
     margin-right: 25px;
@@ -196,9 +214,9 @@ header{
     margin-bottom: 5px;
 }
 .carrito .carrito-item .btn-eliminar{
-    position: absolute;
+    position: right;
     right: 15px;
-    top: 15px;
+    top: 20px;
     color: #000;
     font-size: 20px;
     width: 40px;
@@ -212,8 +230,33 @@ header{
     background: transparent;
     z-index: 20;
 }
+
 .carrito .carrito-item .btn-eliminar i{
     pointer-events: none;
+}
+
+.carrito-vaciar{
+  align-content: center;
+  padding: 20px;
+
+}
+.carrito-vaciar .btn-vaciar{
+  display: block;
+  width: 60%;
+  border: none;
+  background: #291818;
+  color: #fff;
+  border-radius: 5px;
+  font-size: 13px;
+  padding: 10px;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.btn-vaciar:hover{
+  scale: 1.05;
 }
 
 .carrito-total{
@@ -237,14 +280,29 @@ header{
     border-radius: 5px;
     font-size: 18px;
     padding: 20px;
-    display: flex;
     justify-content: space-between;
     align-items: center;
     cursor: pointer;
     transition: .3s;
 }
+
 .carrito-total .btn-pagar:hover{
     scale: 1.05;
+}
+
+.btn-regresar {
+  display: block;
+  width: 80%;
+  border: none;
+  background: #150000;
+  color: #fff;
+  border-radius: 10px;
+  font-size: 14px;
+  padding: 10px;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  transition: .3s;
 }
 
 /* SECCION RESPONSIVE */
@@ -266,7 +324,7 @@ header{
   .infotienda h3, #infot, p{
     text-align: center;
     font-size: 12.5px;
-    font-family:'Ubuntu', sans-serif;
+    font-family:'poppins';
     padding: 0px;
   }
   
@@ -285,7 +343,7 @@ header{
     display:flex;
     text-transform: uppercase;
     font-size: 13.5px;
-    font-family: 'Ubuntu', sans-serif;
+    font-family: 'poppins';
     text-align: justify;
   }
   
@@ -301,13 +359,13 @@ header{
 
   .opciones li h3 a span{
     font-size: 12.5px;
-    font-family: 'Ubuntu', sans-serif;
+    font-family: 'poppins';
   }
 
   .redes, #redes{
     text-align: right;
     font-size: 12px;
-    font-family: 'Ubuntu', sans-serif;
+    font-family: 'poppins';
     }
     
     .insta, .faceb, .natura-1, .gotrendier{
@@ -326,6 +384,6 @@ header{
       letter-spacing: 1.2px;
       text-align: center;
       font-size: 11.5px;
-      font-family: 'Ubuntu', sans-serif;
+      font-family: 'poppins';
       margin: 20px;
     }

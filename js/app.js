@@ -73,7 +73,7 @@ function hacerVisibleCarrito(){
     carrito.style.opacity = '1';
 
     let items =document.getElementsByClassName('contenedor-items')[0];
-    items.style.width = '60%';
+    items.style.width = '50%';
 }
 
 //Función que agrega un item al carrito
@@ -82,14 +82,18 @@ function agregarItemAlCarrito(titulo, precio, imagenSrc){
     item.classList.add = ('item');
     let itemsCarrito = document.getElementsByClassName('carrito-items')[0];
 
-    //controla que el item que intenta ingresar no se encuentre en el carrito
+    //controla que el si el item que intenta ingresar se encuentra en el carrito sume la cantidad
     let nombresItemsCarrito = itemsCarrito.getElementsByClassName('carrito-item-titulo');
-    for(let i=0;i < nombresItemsCarrito.length;i++){
-        if(nombresItemsCarrito[i].innerText==titulo){
-            alert("El item ya se encuentra en el carrito, deseas agregar otro?");
-            return;
+    for(let i=0;i < nombresItemsCarrito.length;i++)
+        {
+        if(nombresItemsCarrito[i].innerText==titulo)
+            {   
+            let cantidadActual = selector.getElementsByClassName('carrito-item-cantidad')[0].value;
+            cantidadActual++;    
+            //alert("El item ya se encuentra en el carrito, deseas agregar otro?");
+            //return;
+            }
         }
-    }
 
     let itemCarritoContenido = `
         <div class="carrito-item">
@@ -97,14 +101,14 @@ function agregarItemAlCarrito(titulo, precio, imagenSrc){
             <div class="carrito-item-detalles">
                 <span class="carrito-item-titulo">${titulo}</span>
                 <div class="selector-cantidad">
-                    <i class="fa-solid fa-minus restar-cantidad"></i>
+                    <i class="bi bi-dash-lg restar-cantidad"></i>
                     <input type="text" value="1" class="carrito-item-cantidad" disabled>
-                    <i class="fa-solid fa-plus sumar-cantidad"></i>
+                    <i class="bi bi-plus-lg sumar-cantidad"></i>
                 </div>
                 <span class="carrito-item-precio">${precio}</span>
             </div>
-            <button class="btn-eliminar">
-                <i class="fa-solid fa-trash"></i>
+            <button class="btn-eliminar" >
+                <i class="bi bi-trash2"></i>
             </button>
         </div>
     `
