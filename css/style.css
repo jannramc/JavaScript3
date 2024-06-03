@@ -165,7 +165,7 @@ header{
 }
 .carrito .carrito-item{
     display: flex;
-    align-items: center;
+    justify-content: space-between;
     position: relative;
     border-bottom: 1px solid #666;
     padding: 20px;
@@ -173,6 +173,7 @@ header{
 .carrito .carrito-item img{
     margin-right: 20px;
 }
+
 .carrito .carrito-item .carrito-item-titulo{
     display: block;
     font-weight: bold;
@@ -207,12 +208,14 @@ header{
     border: 1px solid #000;
     cursor: pointer;
 }
+
 .carrito .carrito-item .carrito-item-precio{
     font-weight: bold;
     display: inline-block;
     font-size: 18px;
     margin-bottom: 5px;
 }
+
 .carrito .carrito-item .btn-eliminar{
     position: right;
     right: 15px;
@@ -235,28 +238,41 @@ header{
     pointer-events: none;
 }
 
-.carrito-vaciar{
-  align-content: center;
-  padding: 20px;
-
+.carrito .acciones-carrito
+{
+  display: flex;
+  justify-content: space-around;
+  padding: 1rem;
 }
-.carrito-vaciar .btn-vaciar{
-  display: block;
-  width: 60%;
-  border: none;
-  background: #291818;
+
+.carrito .acciones-carrito .accion-vaciar .btn-vaciar{
+  width: 100%;
+  background: #150000;
   color: #fff;
-  border-radius: 5px;
-  font-size: 13px;
-  padding: 10px;
-  justify-content: space-between;
-  align-items: center;
+  font-size: 14px;
+  padding: 1rem;
+  margin: 1rem;
+  border-radius: 1rem;
+  text-transform: uppercase;
   cursor: pointer;
   transition: .3s;
 }
 
 .btn-vaciar:hover{
   scale: 1.05;
+}
+
+.carrito .acciones-carrito .accion-regresar .btn-regresar {
+  width: 90%;
+  background: #150000;
+  color: #fff;
+  font-size: 14px;
+  padding: 1rem;
+  margin: 1rem;
+  border-radius: 1rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: .3s;
 }
 
 .carrito-total{
@@ -278,8 +294,9 @@ header{
     background: #000;
     color: #fff;
     border-radius: 5px;
-    font-size: 18px;
+    font-size: 20px;
     padding: 20px;
+    text-transform: uppercase;
     justify-content: space-between;
     align-items: center;
     cursor: pointer;
@@ -290,20 +307,6 @@ header{
     scale: 1.05;
 }
 
-.btn-regresar {
-  display: block;
-  width: 80%;
-  border: none;
-  background: #150000;
-  color: #fff;
-  border-radius: 10px;
-  font-size: 14px;
-  padding: 10px;
-  justify-content: space-between;
-  align-items: center;
-  cursor: pointer;
-  transition: .3s;
-}
 
 /* SECCION RESPONSIVE */
 @media screen and (max-width: 850px) {
